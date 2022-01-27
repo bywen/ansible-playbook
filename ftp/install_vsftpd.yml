@@ -13,7 +13,7 @@
       copy: 
         src=vsftpd 
         dest=/etc/pam.d/vsftpd
-      notify: restart vsftpd
+      notify: restarted vsftpd
     - name: start vsftpd
       service: 
         name: vsftpd
