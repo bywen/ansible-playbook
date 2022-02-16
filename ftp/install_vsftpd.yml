@@ -21,7 +21,9 @@
     - name: add ftpuser
       user:
         name: "{{item.user}}"
+        #密码要手动设置一下
         password: "{{'item.pass'|password_hash('sha512')}}"
+        #ftp 上传目录
         home: /data/gitlab_list/
         shell: /sbin/nologin
         state: present
